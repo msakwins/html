@@ -1,0 +1,33 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="blbl.css">
+    <title>Miaou</title>
+    <link href="https://fonts.googleapis.com/css?family=Kavivanar" rel="stylesheet">
+    <script>
+        function clickCat() {
+                var cat = document.getElementById("cat");
+                var img = cat.src;
+                img = img.slice(-9, -4);
+                if (img === "kitty") {
+                        cat.src = "kittypawear.png";
+        setTimeout(clickCat, 200);
+                } else {
+                        cat.src = "kitty.png";
+                }
+        }
+    </script>
+</head>
+<body>
+        <div class="hello">
+                Miaou
+            </div>
+    <div class="kitty">
+            <img src="kitty.png" id="cat" usemap="#catmap" width="400px"/>
+    </div>
+    <map name="catmap" id="catmap">
+        <area shape="rect" coords="790,446,980,325" />
+        <area href="#" onclick="clickCat()" shape="poly" coords="160,200,210,200,230,250,190,270,150,250" />
+</map>
+      
+</body>
